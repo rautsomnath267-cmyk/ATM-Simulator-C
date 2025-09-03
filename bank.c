@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 int main() {
-    int pin = 1234, enteredPin, choice, attempts = 0;
-    float balance = 5000.0; // Initial balance
+    int pin = 1234, enteredPin, oldPin, newPin, choice, attempts = 0;
+    float balance = 50000.0; // Initial balance
     float amount;
 
     printf("********* Welcome to ATM Simulator *********\n");
@@ -33,7 +33,8 @@ int main() {
         printf("1. Check Balance\n");
         printf("2. Deposit Money\n");
         printf("3. Withdraw Money\n");
-        printf("4. Exit\n");
+        printf("4.Change Pin")
+        printf("5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
@@ -66,7 +67,23 @@ int main() {
                 }
                 break;
 
-            case 4:
+            case 4:   
+                printf("\nEnter Your Current PIN: ");
+                scanf("%d", &oldPin);
+                if (oldPin == pin)
+                {
+                    printf("\nEnter new 4-digit PIN: ");
+                    scanf("%d", &newPin);
+                    pin = newPin;
+                    printf("PIN changed successfully!\n");
+                }
+                else
+                {
+                    printf("New PIN cannot be the same as the old PIN!\n");
+                }
+                break;
+
+            case 5:
                 printf("\nThank you for using the ATM. Goodbye!\n");
                 break;
 
@@ -77,3 +94,4 @@ int main() {
 
     return 0;
 }
+
