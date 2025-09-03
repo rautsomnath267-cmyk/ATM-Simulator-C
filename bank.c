@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    int pin = 1234, enteredPin, oldPin, newPin, choice, attempts = 0;
+    int pin = 2005, enteredPin, oldPin, newPin, choice, attempts = 0;
     float balance = 50000.0; // Initial balance
     float amount;
 
@@ -33,7 +33,7 @@ int main() {
         printf("1. Check Balance\n");
         printf("2. Deposit Money\n");
         printf("3. Withdraw Money\n");
-        printf("4.Change Pin")
+        printf("4. Change Pin")
         printf("5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -94,4 +94,5 @@ int main() {
 
     return 0;
 }
+
 
